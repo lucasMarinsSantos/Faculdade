@@ -5,11 +5,11 @@ while True:
         lB = float(input("Tamanho do segundo lado: "))
         lC = float(input("Tamanho do terceiro lado: "))
         if lA == lB == lC:
-            print("O triângulo é Equilátero")
+            print("\nO triângulo é Equilátero")
         elif lA != lB != lC != lA:
-            print ("o triângulo é escaleno")
+            print ("\nO triângulo é escaleno")
         else:
-            print ("O triângulo é isósceles")          
+            print ("\nO triângulo é isósceles")          
         break
     except ValueError:
         print ("Digite apenas números!")
