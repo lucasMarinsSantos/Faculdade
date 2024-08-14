@@ -6,7 +6,7 @@ while True:
         lC = float(input("Tamanho do terceiro lado: "))
         if lA == lB == lC:
             print("\nO triângulo é Equilátero")
-        elif lA != lB != lC != lA:
+        elif lA != lB and lA != lC and lB != lC:
             print ("\nO triângulo é escaleno")
         else:
             print ("\nO triângulo é isósceles")          
