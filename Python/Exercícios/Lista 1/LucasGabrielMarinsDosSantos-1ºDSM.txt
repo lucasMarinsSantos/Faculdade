@@ -1,0 +1,206 @@
+Nome: Lucas Gabriel Marins dos Santos 
+Turma: Desenvolvimento de Software Multiplataforma - 1º Semestre
+
+
+ex1:
+
+print ('Soma de dois números inteiros.')
+while True:
+    try:
+        n1 = int(input ('Digite o primeiro número: '))
+        n2 = int(input ('Digite o segundo número: '))
+        soma = n1 + n2
+        print ('A soma dos dois número são: ', soma)
+        break
+    except ValueError:
+        print ('Erro, Digite apenas números inteiros.')
+print ()
+input('Pressione enter para finalizar')
+
+
+-x-
+
+
+ex2:
+
+print ('Conversor de medidas: metros para milímetros\n')
+print ('Utilize o formato correto para digitação\nEx: 1.239,50 = 1239.50\nNão separe os milhares e use "." como separador decimal\n')
+while True:
+    try:
+        metro = float (input ('Digite seu valor em metros: \n'))
+        resultado = metro * 1000
+        if resultado.is_integer():
+            resultado = int(resultado)
+        print ('Seu resultado em milímetros é: ', resultado ,'mm')
+        break
+    except ValueError:
+        print ('Digite apenas números e no formato citado!')
+print ()
+input('Pressione enter para finalizar')
+
+
+-x-
+
+
+ex3:
+
+print ('Conversor de "data" para segundos\nSerá convertido a quantidade de dias, horas, minutos e segundos digitados, para um total em segundos\n')
+while True:
+    try:
+        dia = int(input('Digite os dias: '))
+        hora = int(input('Digite as horas: '))
+        minuto = int(input('Digite os minutos: '))
+        segundo = int(input('Digite os segundos: '))
+        resultado = (dia * 86400) + (hora * 3600) + (minuto * 60) + segundo
+        print ('A quantidade total de segundos em: ', dia , ' dias,' , hora , ' horas,' , minuto , ' minutos e ' , segundo , ' segundos' , 'equivale a: ' , resultado , ' segundos')  
+        break
+    except ValueError:
+            print ('Digite apenas números inteiros!')
+print ()
+input ('Pressione enter para finalizar')
+
+
+-x-
+
+
+ex4:
+
+print ('Calculadora de aumento do salário em porcentagem\n')
+while True:
+    try:
+        salario = float(input('Digite o salário: '))
+        porcentagem = float(input('Digite a porcentagem do aumento: '))
+        aumento = (salario/100 * porcentagem) + salario
+        print ('O salário de R$' , salario , ',calculado com o aumento de' , porcentagem , '%, resulta no valor total de: R$' , aumento , '\n')
+        break
+    except ValueError:
+        print ('Digite apenas números!')
+input ('Pressione enter para finalizar')
+
+
+-x-
+
+
+ex5:
+
+print ('Desconto sobre mercadoria\n')
+print ('Não separe a casa dos milhares e use "." para separar a casa decimal\nEx: 1.234,50 = 1234.50\n')
+while True:
+    try:
+        mercadoria = float(input('Preço da mercadoria: '))
+        porcentagem = float(input('Qual o percentual de desconto: '))
+        desconto = (mercadoria/100) * porcentagem
+        total = desconto + mercadoria
+        print (f'O valor do desconto é de: R$ {desconto:.2f}')
+        print (f'O valor final do produto é de: R$ {total:.2f}')
+        break
+    except ValueError:
+        print ('Digite apenas números!')
+input ('Pressione enter para finalizar')
+
+
+-x-
+
+
+ex6:
+
+print ('Calculadora de tempo de viagem\n')
+print ('Formato de digitação\n Ex: 1.234,50 = 1234.50\n  Não separe as casas de milhares e use "." para separar a casa decimal\n')
+while True:
+    try:
+        distancia = float(input('Distância da viagem em quilômetros: '))
+        velocidade = float(input('Velocidade média em KM/h esperado: '))
+        tempo = (distancia / velocidade) * 60
+        hora = tempo / 60
+        print (f'O tempo de viagem é: {tempo:.2f} minutos')
+        break
+    except ValueError:
+        print ('Digite apenas números!\n')
+print ()
+print ('Pressione enter para finalizar')
+
+
+-x-
+
+
+ex7:
+
+print ('Conversor de temperatura: Celsius para Fahrenheit\n')
+while True:
+    try:
+        cel = float(input('Digite a temperatura em graus Celsius: \n'))
+        fah = (9*cel/5) + 32
+        print (f'A temperatura em graus Fahrenheint é: {fah:.2f} Fº\n')
+        break
+    except ValueError:
+        print ('Digite apenas números!\n')
+input ('Pressione enter para finalizar')
+
+
+-x-
+
+
+ex8:
+
+print ('Conversor de temperatura: Fahrenheint para Celsius\n')
+while True:
+    try:
+        fah = float(input('Digite a temperatura em Fahrenheint: '))
+        cel = (fah-32) * 5/9
+        print (f'A temperatura em Celsius é: {cel:.2f} Cº\n')
+        break
+    except ValueError:
+        print ('Digite apenas números')
+print ()
+input ('Pressione enter para finalizar')
+
+
+-x-
+
+
+ex9:
+
+print ('Calculadora para aluguel de carros\n')
+print ('Referência: 1 dia de aluguel = R$60,00 e R$0.15 por KM rodado\n')
+while True:
+    try:
+        dia = int(input('Dias de uso do carro: \n'))
+        percorrido = float(input('Quilômetros percorridos: \n'))
+        valor = (dia*60) + (percorrido*0.15)
+        print (f'O valor total do alugel é: R${valor:.2f}')
+        break
+    except ValueError:
+        print ('Digite apenas números!\n')
+print ()
+input ('Pressione enter para finalizar') 
+
+
+-x-
+
+
+ex10:
+
+print ('Calculadora de redução da vida de um fumante\n')
+while True:
+    try:
+        dia = int(input('Quantidade média de cigarros consumidos por dia: \n'))
+        ano = int(input('Quantos anos consome cigarro: \n'))
+        total =  (ano * 365 * dia * 10) / 1440
+        print (f'O usuário perdeu em média pelo consumo de cigarro: {total:.0f} dias')
+        break
+    except ValueError:
+        print ('Digite apenas números inteiros\n')
+print ()
+input ('Pressione enter para finalizar')
+
+-x-
+
+
+ex11:
+
+import sys
+sys.set_int_max_str_digits(1000000)
+print ('Calculo do número 2 elevado a 1.000.000\n')
+resultado = len(str(2**1000000))
+print ('Há' , resultado , 'dígitos em 2 elevado a 1.000.000\n')
+input ('Pressione enter para finalizar')
