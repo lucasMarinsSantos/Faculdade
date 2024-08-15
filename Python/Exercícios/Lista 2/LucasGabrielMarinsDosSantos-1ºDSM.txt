@@ -1,0 +1,153 @@
+Nome: Lucas Gabriel Marins dos Santos 
+Turma: Desenvolvimento de Software Multiplataforma - 1º Semestre
+Lista: 2
+
+ex1: 
+
+print ("Qual o tipo do triângulo")
+while True:
+    try:
+        lA = float(input("Tamanho do primeiro lado: "))
+        lB = float(input("Tamanho do segundo lado: "))
+        lC = float(input("Tamanho do terceiro lado: "))
+        if lA == lB == lC:
+            print("\nO triângulo é Equilátero")
+        elif lA != lB and lA != lC and lB != lC:
+            print ("\nO triângulo é escaleno")
+        else:
+            print ("\nO triângulo é isósceles")          
+        break
+    except ValueError:
+        print ("Digite apenas números!")
+print ()
+input ("Pressione enter para finalizar")
+
+
+-x-
+
+
+ex2:
+
+print ("O ano é bissexto?")
+while True:
+    try:
+        ano = int(input("Digite o ano: \n"))
+        if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0) :
+            print ("O ano é bissexto\n")
+        else:
+            print ("O ano não é bissexto\n")
+        break
+    except ValueError:
+        print ("Digite apenas números inteiros!\n")
+print ()
+input ("Pressione enter para finalizar")
+
+
+-x-
+
+
+ex3:
+
+print ("Controle de pesca")
+while True:
+    try:
+        peso = float(input("Quantos quilos foi pescado: \n"))
+        if peso > 50:
+            excesso = peso - 50
+            multa = excesso * 4
+        else:
+            excesso = multa = 0
+        print (f"O peso máximo permitido foi ultrapassado em: {excesso:.2f} Kg\nResultando na multa, no valor de: R$ {multa:.2f}")
+        break
+    except ValueError:
+        print ("Digite apenas número!\n")
+print ()
+input ("Pressione enter para finalizar")
+
+
+-x-
+
+
+ex4:
+
+print ("Qual o maior de 3 números\n")
+while True:
+    try:
+        a = float(input("Primeiro número: \n"))
+        b = float(input("Segundo número: \n"))
+        c = float(input("Terceiro número: \n"))
+        maior = max (a, b, c)
+        print (f"O maior número é : {maior:.2f}\n")
+        break
+    except ValueError:
+        print("Digite apenas números!\n")
+print ()
+input ("Pressione enter para finalizar")
+
+
+-x-
+
+
+ex5:
+
+print ("Qual o maior e menor de 3 números\n")
+while True:
+    try:
+        a = float(input("Primeiro número: \n"))
+        b = float(input("Segundo número: \n"))
+        c = float(input("Terceiro número: \n"))
+        maior = max (a, b, c)
+        menor = min (a, b, c)
+        print (f"O maior número é : {maior:.2f}\nO menor número é : {menor:.2f}")
+        break
+    except ValueError:
+        print("Digite apenas números!\n")
+print ()
+input ("Pressione enter para finalizar")
+
+
+-x-
+
+
+ex6:
+
+print ("Calculo de sálario e descontos mensais")
+while True:
+    try:
+        ganhoHora = float(input("Valor da hora de trabalho: "))
+        horaMes = float(input("Horas trabalhadas no mês: "))
+        salarioBruto = horaMes * ganhoHora
+        ir = salarioBruto * 0.11
+        inss = salarioBruto * 0.08
+        sind = salarioBruto * 0.05
+        salarioLiquido = salarioBruto - ir - inss - sind
+        descontoTotal = salarioBruto - salarioLiquido
+        print (f"Informes sobre o salário mensal:\n\nSalário Bruto: R${salarioBruto:.2f}\n\n     Descontos:\nImposto de renda: R$ {ir:.2f}\nINSS: R$ {inss:.2f}\nSindicato: R$ {sind:.2f}\n\nSalário liquído: R$ {salarioLiquido:.2f}\nDescontos totais: R$ {descontoTotal:.2f}")
+        break
+    except ValueError:
+        print ("Digite apenas números!")
+print ()
+input ("Pressione enter para finalizar")
+
+
+-x-
+
+
+ex7:
+
+print ("Calculadora de latas de tinta para 'x' metros quadrados\n")
+while True:
+    try:
+        area = float(input("Tamanho em metros quadrados da área a ser pintada: "))
+        m2Lata = 18 * 3
+        qL1 = area / m2Lata
+        qL2 = area // m2Lata
+        qL3 = qL1 - qL2
+        if qL3 != 0:
+            qL1 = qL2 + 1
+        print (f'\nSerão necessárias: {qL1:.0f} lata(s) de tinta para {area:.2f} metro(s) quadrado(s)\nFicando no valor de R$ {qL1*80:.2f}')
+        break
+    except ValueError:
+        print("Digite apenas número!")
+print ()
+input ("Pressione enter para finalizar")
