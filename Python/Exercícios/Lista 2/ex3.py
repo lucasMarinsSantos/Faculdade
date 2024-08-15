@@ -5,7 +5,7 @@ while True:
         if peso > 50:
             excesso = peso - 50
             multa = excesso * 4
-        if peso <= 50:
+        else:
             excesso = multa = 0
         print (f"O peso máximo permitido foi ultrapassado em: {excesso:.2f} Kg\nResultando na multa, no valor de: R$ {multa:.2f}")
         break
