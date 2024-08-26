@@ -1,0 +1,85 @@
+Nome: Lucas Gabriel Marins dos Santos 
+Turma: Desenvolvimento de Software Multiplataforma - 1º Semestre
+Lista: 3
+
+ex1: 
+
+print ("Ex. Nota entre zero e dez")
+while True:
+    try:
+        x = float(input("\nDigite um número de 0 a 10: "))
+        if 0 <= x <= 10:
+            print ("\nSeu número é:", x)
+            break
+        else:
+            print ("\nO número deve estar entre 0 e 10.")
+    except ValueError:
+        print ("\nDigite apenas números!")
+
+
+-x-
+
+
+ex2:
+
+print ("Digite nome de usuário != senha")
+while True:
+    usuario = input("\nDigite seu usuário: ")
+    senha = input("\nDigite sua senha: ")
+    if usuario == senha:
+        print ("\nUsuário e senha iguais, tente novamente!")
+    else:
+        print ("\nUsuário cadastrado com sucesso")
+        break
+
+
+-x-
+
+
+ex3:
+
+print ("Crescimento populacional")
+paisA = 80000
+paisB = 200000
+a = 0
+while paisA <= paisB:
+    paisA = paisA + (paisA * 0.03)
+    paisB = paisB + (paisB * 0.015)
+    a = a + 1
+print (f"Demorou {a:.0f} anos para o paísA ultrapassar a população do paísB")
+
+
+-x-
+
+
+ex4:
+
+print ("Calculadora Fibonacci")
+num = int(input("\nNúmero inteiro: "))
+acom = 0
+if num <= 0:
+    print ("\nO número deve ser maior que zero")
+elif num == 1 or num == 2:
+    print (f"\nO número corresponde a {num:.0f}º é: 1")
+else:
+    fibo1, fibo2 = 1, 1
+    for i in range(3, num + 1):
+        fibo1, fibo2 = fibo2, fibo1 + fibo2
+        acom = acom + 1
+    print (f"\nO número Fibonacci correspondente a {num:.0f}º casa é: {fibo2:.0f}")
+
+
+-x-
+
+
+ex5:
+
+print ("Calculadora: Máximo divisor comum entre dois números")
+def mdc(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+num1 = int(input("\nDigite o primeiro número: "))
+num2 = int(input("\nDigite o segundo número: "))
+res = mdc(num1, num2)
+print(f"\nO máximo divisor comum entre {num1} e {num2} é: {res}")
