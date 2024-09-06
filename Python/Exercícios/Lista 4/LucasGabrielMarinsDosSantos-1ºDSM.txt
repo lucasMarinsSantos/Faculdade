@@ -1,0 +1,110 @@
+Nome: Lucas Gabriel Marins dos Santos 
+Turma: Desenvolvimento de Software Multiplataforma - 1º Semestre
+Lista: 4
+
+ex1: 
+
+from random import randint
+
+print ("\n10 números aleatórios, mostrando o maior e menor deles\n")
+x = 0
+numsort = []
+while x <10:
+    x += 1
+    num = randint (1,100)
+    print(f"{x: .0f}º número: {num: .0f}")
+    numsort.append(num)
+    maior = numsort [0]
+    menor = numsort [0]
+    for num in numsort:
+        if num > maior: maior = num
+        if num < menor: menor = num
+print (f"\nO menor número é o: {menor:.0f}, e o maior número é o: {maior:.0f}")
+print ("\nFim!\n")
+
+
+-x-
+
+
+ex2:
+
+from random import randint
+
+print ("\n20 números aleatórios com: Lista dos 20, dos números pares e ímpares\n")
+x = 0
+numsort = []
+while x < 20:
+    x += 1
+    num = randint (1,100)
+    numsort.append(num)
+par = []
+impar = []
+for PeI in numsort:
+    if PeI % 2 == 0:
+        par.append(PeI)
+    else:
+        impar.append(PeI)
+print ("Números aleatórios: " ,numsort , "\n")
+print ("Números pares: " ,par , "\n")
+print ("Números ímpares: " ,impar , "\n") 
+
+
+-x-
+
+
+ex3:
+
+print ("Três vetores: \n")
+from random import randint
+x = 0
+v1 = []
+v2 = []
+v3 = []
+while x <10:
+    x += 1
+    num1 = randint (1,100)
+    v1.append(num1)
+    v3.append(num1)
+    num2 = randint (1,100)
+    v2.append(num2)
+    v3.append(num2)
+print (f"1º Lista: {v1}")
+print (f"2º Lista: {v2}")
+print (f"3º Lista: {v3}")
+
+
+-x-
+
+
+ex4:
+
+print ("Splita e separa!\n")
+import re
+
+texto1 = re.sub(r"[^A-Za-z0-9\s]", "", '''The Python Software Foundation and the global Python community welcome and encourage participation by everyone. Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles. We want our community to be more diverse: whoever you are, and whatever your background, we welcome you''').lower().split()
+texto2 = [] 
+py = tuple("python")
+for palavra in texto1:
+    if palavra[0] in py or palavra[-1] in py:
+        texto2.append(palavra)
+print (texto2)
+
+
+-x-
+
+
+ex5:
+
+print ("Splita e conta!\n")
+
+import re
+
+texto1 = re.sub(r"[^A-Za-z0-9\s]", "", '''The Python Software Foundation and the global Python community welcome and encourage participation by everyone. Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles. We want our community to be more diverse: whoever you are, and whatever your background, we welcome you''').lower().split()
+
+py = tuple("python")
+texto2 = []
+
+for palavra in texto1:
+    if len(palavra) > 4 and any(letra in py for letra in palavra):
+        texto2.append(palavra)
+print (texto2)
