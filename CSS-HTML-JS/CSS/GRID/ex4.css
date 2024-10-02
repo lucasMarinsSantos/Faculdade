@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: blueviolet;
+  padding: 20px;
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  color: white;
+}
+
+.main {
+  background-color: darkcyan;
+  padding: 20px;
+  margin-left: 25%;
+  height: 100vh;
+  color: white;
+}

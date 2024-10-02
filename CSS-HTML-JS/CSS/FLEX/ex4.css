@@ -1,0 +1,25 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.imagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imagens img {
+    width: 33.333%;
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .imagens img {
+        width: 50%;
+    }
+}
+@media (max-width: 480px) {
+    .imagens img {
+        width: 100%;
+    }
+}

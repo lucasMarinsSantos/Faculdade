@@ -1,0 +1,15 @@
+.cont {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 100vh;
+}
+
+.col1 {
+  background-color: darkcyan;
+  padding: 20px;
+}
+
+.col2 {
+  background-color: blueviolet;
+  padding: 20px;
+}

@@ -1,0 +1,54 @@
+Perguntas que cada membro deve responder:
+
+O que fiz?
+
+O que farei?
+
+Existe algum impedimento?
+
+
+Emanuel:
+fez
+Estudo beatifullsoup e funcionamento
+estudo chart js
+Analise do banco de dados e estudo
+
+prox:
+Chart JS estudo plotar gráficos
+Começo beatifull soup
+
+sem empedimentos:
+
+Ana: 
+Fez: Estudo flask 
+fazer: beatifull soup e chart.js
+sem impedimentos
+
+Bia
+Fez: fez pagina individual de vereadores, perfil
+fez header 
+fazer: estudar JavaScript e implementar na página perfil vereadores e header, otimizar css e html
+sem impedimentos:
+
+João
+Estudo css e html, começou página home.html e protótipo
+estudo responsividade
+sem impedimentos
+
+Gabriel:
+Fez: estudo flask e integração banco de dados - integração crud banco de dados (flask)
+fazer: estudar beatifull soup para raspragem
+sem impedimentos
+
+Lucas:
+
+
+Matheus: 
+fez: página de relatórios.html estudo html css e javascript
+fazer: estudar javascript
+sem impedimentos
+
+Décio
+Fez: fez o logo - estudo de html e css
+fazer: terminar logo de vez - começar html vereadores geral.
+sem impedimentos.
