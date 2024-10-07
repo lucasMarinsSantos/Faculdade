@@ -9,7 +9,7 @@
 # near_ten(17) -> False
 # near_ten(19) -> True
 def near_ten(n):
-  return 
+  
 
 # B. lone_sum
 # Soma maluca: some os números inteiros a, b, e c
