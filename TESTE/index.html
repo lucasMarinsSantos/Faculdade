@@ -1,193 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repositório Zuado e Colorido do Lucas</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: "Comic Sans MS", cursive, sans-serif;
-            background-color: #ff00ff;
-            margin: 0;
-            padding: 0;
-            color: #00ff00;
-            animation: backgroundColorChange 1s infinite;
-        }
-        @keyframes backgroundColorChange {
-            0% { background-color: #ff00ff; }
-            20% { background-color: #00ffff; }
-            40% { background-color: #ffff00; }
-            60% { background-color: #ff6600; }
-            80% { background-color: #00ff00; }
-            100% { background-color: #ff00ff; }
-        }
-        header {
-            background-color: #ff0000;
-            color: #00ffcc;
-            padding: 25px;
-            text-align: center;
-            border-bottom: 15px dotted #0000ff;
-            font-size: 3em;
-            transform: rotate(-10deg);
-            animation: headerSpin 4s infinite linear;
-        }
-        @keyframes headerSpin {
-            0% { transform: rotate(-10deg); }
-            50% { transform: rotate(10deg); }
-            100% { transform: rotate(-10deg); }
-        }
-        .container {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
-        .box {
-            width: 45%;
-            padding: 30px;
-            border-radius: 50%;
-            box-shadow: 0 0 50px #000;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 30px;
-            background-color: #ff6600;
-            transform: rotate(15deg);
-            animation: boxSpin 2s infinite alternate;
-        }
-        @keyframes boxSpin {
-            0% { transform: rotate(15deg); }
-            50% { transform: rotate(-15deg); }
-            100% { transform: rotate(15deg); }
-        }
-        .box img {
-            width: 180px;
-            height: auto;
-            position: absolute;
-            top: -40px;
-            right: -40px;
-            transform: rotate(60deg);
-            border: 8px dashed #ff0000;
-            animation: imgSpin 3s infinite alternate;
-        }
-        @keyframes imgSpin {
-            0% { transform: rotate(60deg); }
-            100% { transform: rotate(-60deg); }
-        }
-        .content {
-            text-align: center;
-            font-size: 22px;
-            color: #0000ff;
-            animation: contentBounce 3s infinite;
-        }
-        @keyframes contentBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        .action-button {
-            background-color: #00ff00;
-            color: #ff00ff;
-            border: 6px solid #000;
-            padding: 20px;
-            cursor: pointer;
-            margin-top: 20px;
-            font-size: 1.8em;
-            transform: skew(15deg);
-            transition: all 0.5s;
-        }
-        .action-button:hover {
-            background-color: #ff0000;
-            color: #00ffff;
-            border-radius: 50%;
-            transform: scale(1.5) rotate(-25deg);
-        }
-        .gallery {
-            text-align: center;
-            margin: 30px;
-        }
-        .gallery img {
-            width: 220px;
-            height: auto;
-            margin: 15px;
-            border-radius: 50%;
-            box-shadow: 0 0 30px #00ff00;
-            transform: rotate(-25deg);
-            animation: imgBounce 1.5s infinite;
-        }
-        @keyframes imgBounce {
-            0%, 100% { transform: translateY(0) rotate(-25deg); }
-            50% { transform: translateY(-30px) rotate(25deg); }
-        }
-        .extra-boxes {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-        .extra-box {
-            width: 30%;
-            padding: 25px;
-            border-radius: 20px;
-            background-color: #ffcc00;
-            box-shadow: 0 0 20px #000;
-            margin: 15px;
-            text-align: center;
-            transform: skew(-10deg);
-            animation: extraBoxMove 2s infinite alternate;
-        }
-        @keyframes extraBoxMove {
-            0% { transform: skew(-10deg) translateY(0); }
-            50% { transform: skew(-10deg) translateY(-20px); }
-            100% { transform: skew(-10deg) translateY(0); }
-        }
-        .random-quote {
-            font-size: 1.5em;
-            margin: 20px;
-            padding: 20px;
-            background-color: #00ffcc;
-            border-radius: 15px;
-            animation: randomQuoteSpin 3s infinite alternate;
-        }
-        @keyframes randomQuoteSpin {
-            0% { transform: rotate(0deg); }
-            50% { transform: rotate(5deg); }
-            100% { transform: rotate(-5deg); }
-        }
-    </style>
+    <title>Repositório Lucas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <h1>Repositório Zuado e Colorido do Lucas</h1>
-        <p>É tudo bugado, mas a diversão é garantida!</p>
+        <h1>Lucas Gabriel Marins dos Santos</h1>
+        <p>Tudo normal aqui!</p>
     </header>
     <div class="gallery">
-        <h2>Galeria de Coisas do Lucas</h2>
-        <img src="https://via.placeholder.com/220?text=Lucas+na+Faculdade" alt="Lucas na Faculdade">
-        <img src="https://via.placeholder.com/220?text=Projeto+Team+Draco" alt="Projeto Team Draco">
-        <img src="https://via.placeholder.com/220?text=FATEC+Coding" alt="FATEC Coding">
-        <img src="https://via.placeholder.com/220?text=Draco+Imperium" alt="Draco Imperium">
-        <img src="https://via.placeholder.com/220?text=Git+Master" alt="Git Master">
-        <img src="https://via.placeholder.com/220?text=Estudos+Python" alt="Estudos Python">
-        <img src="https://via.placeholder.com/220?text=Calistenia+e+Treinos" alt="Calistenia e Treinos">
-        <img src="https://via.placeholder.com/220?text=Vida+de+Uber" alt="Vida de Uber">
+        <h2>Coisas</h2>
+        <img src="https://via.placeholder.com/220?text=Perfil" alt="Perfil">
+        <img src="https://via.placeholder.com/220?text=Currículo" alt="Currículo">
+        <img src="https://via.placeholder.com/220?text=Principais+Projetos" alt="Principais Projetos">
+        <img src="https://via.placeholder.com/220?text=Trabalhos+Acadêmicos" alt="Trabalhos Acadêmicos">
+        <img src="https://via.placeholder.com/220?text=Certificados" alt="Certificados">
+        <img src="https://via.placeholder.com/220?text=Contato" alt="Contato">
+        <img src="https://via.placeholder.com/220?text=Estudos" alt="Estudos">
+        <img src="https://via.placeholder.com/220?text=Curiosidades" alt="Curiosidades">
     </div>
     <div class="container">
         <div class="box">
-            <h2>Lucas Gabriel dos Santos</h2>
-            <img src="https://via.placeholder.com/180?text=Lucas" alt="Lucas">
+            <h2>Lucas Gabriel Marins dos Santos</h2>
+            <img src="shrek.jpg" alt="Lucas">
             <div class="content">
                 <p><strong>Perfil:</strong> Desenvolvedor e Estudante da FATEC</p>
-                <p><strong>Descrição:</strong> O Lucas está sempre aprendendo coisas novas, mesmo que tudo esteja bugado! Foco em Python, projetos com Team Draco, e muito café.</p>
-                <button class="action-button" onclick="mostrarMensagemEstranha()">Saiba Mais!</button>
+                <p><strong>Descrição:</strong> Estou sempre aprendendo coisas novas, mesmo que tudo esteja bugado! Muito
+                    Energético e borá!</p>
+                <button class="action-button" onclick="mostrarMensagemEstranha()">Saiba Menos!</button>
             </div>
         </div>
         <div class="box">
             <h2>Team Draco</h2>
-            <img src="https://via.placeholder.com/180?text=Team+Draco" alt="Team Draco">
+            <img src="drago.jpg" alt="Team Draco">
             <div class="content">
-                <p><strong>Projeto:</strong> Desenvolvimento de Software</p>
-                <p><strong>Descrição:</strong> O Team Draco é onde o Lucas coloca toda sua energia para criar coisas incríveis, sempre do jeito mais caótico possível!</p>
+                <p><strong>Projeto:</strong> Desenvolvimento de um Software para analisar vereadores</p>
+                <p><strong>Descrição:</strong> O Team Draco é onde está o foco atual</p>
                 <button class="action-button" onclick="mostrarMensagemEstranha()">Confira o Caos!</button>
             </div>
         </div>
@@ -195,39 +48,21 @@
     <div class="extra-boxes">
         <div class="extra-box">
             <h3>Hackathons e Competições</h3>
-            <p>O Lucas adora participar de hackathons para testar suas habilidades e aprender coisas novas em equipe. É pura adrenalina!</p>
+            <p>Competição constante contra eu mesmo!</p>
         </div>
         <div class="extra-box">
-            <h3>Marketing Digital</h3>
-            <p>Além de programar, Lucas e Murimu estão explorando o mundo do marketing digital, conectando empresas locais ao vasto universo da internet!</p>
+            <h3>Trabalho</h3>
+            <p>Infelizmente!</p>
         </div>
         <div class="extra-box">
             <h3>Rotina do Lucas</h3>
-            <p>Estudar, trabalhar de Uber, desenvolver projetos, treinar, e tomar muito café. Tudo ao mesmo tempo, e tudo bagunçado!</p>
+            <p>Mimir. obs: Talvez outras coisas</p>
         </div>
     </div>
     <div class="random-quote">
         <p id="quote">"Às vezes é preciso fazer nada para conseguir tudo... ou algo assim, sei lá."</p>
     </div>
-    <script>
-        function mostrarMensagemEstranha() {
-            const mensagens = [
-                "Você clicou e nada aconteceu, parabéns!",
-                "Um pato aparece do nada e nada acontece... ainda.",
-                "Lucas está estudando, mas o caos sempre continua!",
-                "Você ganhou 100 pontos de bugabilidade!",
-                "Uma mensagem estranha para um site estranho, sucesso!"
-            ];
-            alert(mensagens[Math.floor(Math.random() * mensagens.length)]);
-        }
-
-        document.querySelectorAll('.action-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const novaMensagem = document.createElement('p');
-                novaMensagem.textContent = `Mais uma coisa bugada adicionada às ${new Date().toLocaleTimeString()}`;
-                document.body.appendChild(novaMensagem);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
