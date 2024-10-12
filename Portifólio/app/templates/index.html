@@ -5,32 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio</title>
     <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
-  <body> 
+  <body>
     <h1>Menu Principal</h1>
     <nav class="nav">
       <ul>
-        <li><button onclick="location.href='perfil.html'">Perfil</button></li>
         <li>
-          <button onclick="location.href='curriculo.html'">Currículo</button>
-        </li>
-        <li>
-          <button onclick="location.href='projeto.html'">
-            Principais Projetos
+          <button class="button" onclick="location.href='perfil.html'">
+            PERFIL
           </button>
         </li>
         <li>
-          <button onclick="location.href='academico.html'">
-            Trabalhos Acadêmicos
+          <button class="button" onclick="location.href='curriculo.html'">
+            CURRICULO
           </button>
         </li>
         <li>
-          <button onclick="location.href='certificado.html'">
-            Certificados
+          <button class="button" onclick="location.href='projeto.html'">
+            PRINCIPAIS PROJETOS
           </button>
         </li>
-        <li><button onclick="location.href='contato.html'">Contato</button></li>
+        <li>
+          <button class="button" onclick="location.href='academico.html'">
+            TRABALHOS ACADEMICOS
+          </button>
+        </li>
+        <li>
+          <button class="button" onclick="location.href='certificado.html'">
+            CERTIFICADOS
+          </button>
+        </li>
+        <li>
+          <button class="button" onclick="location.href='contato.html'">
+            CONTATO
+          </button>
+        </li>
       </ul>
     </nav>
+    <div class="player">
+    <button class="playpause">
+      <i class="fa-solid fa-play"></i>
+    </button>
+    <audio id="musicafundo" loop>
+      <source src="../static/audio/gtafundo.mp3" type="audio/mp3" />
+    </audio>
+    <label for="volume"></label>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5" />
+    <script src="../static/javascript/script.js"></script>
+  </div>
   </body>
 </html>
