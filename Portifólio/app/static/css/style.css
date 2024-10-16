@@ -27,15 +27,15 @@
 }
 
 :root {
-  --fundo: #000000;
-  --fonte1: #d9f2ff;
-  --fonte2: #758291;
+  --fundo: #00000000;
+  --fonte1: #e1f3fc;
+  --fonte2: #8b9cae;
 }
 
 * {
   margin: 0;
   padding: 0;
-  cursor: url("/app/static/images/mouse.png"), auto;
+  cursor: url("/static/images/mouse.png"), auto;
 }
 
 body {
@@ -45,12 +45,10 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--fundo);
-  cursor: url("/app/static/images/mouse.png"), auto;
-  background-image: url('/app/static/images/bgmenu.png');
-  background-size: 100% 500px;
+  background-image: url('/static/images/bgmenu.png');
+  background-size: 115% 600px;
   background-position: center top;
   background-repeat: no-repeat;
-  background-color: black;
 }
 
 .nav {
@@ -59,7 +57,7 @@ body {
   text-align: center;
   align-items: center;
   background-color: var(--fundo);
-  margin-top: 2%;
+  margin-top: 5%;
   width: 80%;
   height: 80%;
 }
@@ -95,7 +93,6 @@ h1 {
 .button:focus,
 .button.selected {
   color: var(--fonte1);
-  
 }
 
 .button:hover::before,
@@ -105,10 +102,10 @@ h1 {
 }
 
 .button::before {
-  content: url("/app/static/images/arrow.png");
+  content: url("../images/arrow.png");
   position: absolute;
   left: 5px;
-  top: 80%;
+  top: 85%;
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -124,7 +121,6 @@ h1 {
   background-color: var(--fonte2);
   color: var(--fonte1);
   border-radius: 100%;
-  border-color: var(--fonte1);
   transition: 0.1s ease;
 }
 
@@ -145,4 +141,28 @@ h1 {
   flex-direction: row;
   gap: 15px;
   margin-top: 2%;
+}
+
+.ovopascoa {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0);
+  border: 10px;
+  width: 260px;
+  margin-left: -12px;
+  margin-top: 61px;  
+}
+
+/* Tela de Loading */
+
+.bodyloading {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+}
+
+.loading img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
