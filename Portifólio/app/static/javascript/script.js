@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const volume = document.getElementById("volume");
     const icon = playpause.querySelector("i");
     const audioNavegacao = document.getElementById("audioNavegacao");
-    const ovopascoaButton = document.getElementById('ovopascoaButton');
+    const ovopascoaButton = document.querySelector(".ovopascoa button"); // Corrigido para selecionar o botão corretamente
     const ovopascoaAudio = document.getElementById('ovopascoaud');
     const buttons = document.querySelectorAll(".button");
     let selectedButtonIndex = 0;
@@ -63,6 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("mouseleave", () => {
             isNavigatingWithKeyboard = false;
+        });
+
+        button.addEventListener("click", () => {
+            redirectTo(button.textContent.trim().toLowerCase() + '.html');
         });
     });
 

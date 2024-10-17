@@ -4,12 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loading</title>
-    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/loading.css" />
 </head>
-<body class="bodyloading">
+<body>
     <div class="loading">
-        <img id="loadingImage" alt="Carregando..." />
+        <img id="loadingImage" src="../static/images/loading/loadsc1.png" alt="Carregando..." />
     </div>
-    <script src="../static/javascript/script.js"></script>
+    <div class="container">
+        <div class="bar" id="bar"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const page = params.get('page');
+
+            console.log("Página recebida:", page);
+
+            setTimeout(() => {
+                if (page) {
+                    window.location.href = page;
+                } else {
+                    console.error("Página não especificada.");
+                }
+            }, 1500);
+            window.onload = () => {
+                const bar = document.getElementById('bar');
+                setTimeout(() => {
+                    bar.style.width = '100%';
+                }, 100);
+            };
+        });
+    </script>
 </body>
 </html>
