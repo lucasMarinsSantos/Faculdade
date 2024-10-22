@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfil</title>
     <link rel="stylesheet" href="../static/css/perfil.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <h1>Teste 1</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <h1 class="nome">Perfil</h1>
+    <div class="container">
+        <h1 class="perfil">LUCAS GABRIEL MARINS DOS SANTOS</h1>
+        <img src="/static/images/eu.jpeg" class="foto" alt="Perfil" />
+        <article class="sobre">
+            Meu nome é Lucas, tenho 22 anos e sou natural de Cruzeiro, SP, onde vivi a maior parte da minha vida. Passei cerca de dois anos em Lavrinhas, mas desde meados de 2022, estou morando em São José dos Campos. Minha formação acadêmica começou na ETEC de Cruzeiro, onde me formei em técnico em informática integrado ao ensino médio, de 2016 a 2018. Após a escola, em 2019, trabalhei como autônomo em algumas funções envolvendo serralheria e marcenaria. Em 2020, servi ao Exército durante o período obrigatório, onde me destaquei no curso de formação de cabos, recebendo honra ao mérito. Em 2021, após o período obrigatório, comecei a trabalhar em uma provedora de internet, atuando no atendimento ao público, configuração de redes e outras atividades do ramo. Depois, passei para uma empresa de segurança e monitoramento, onde lidava com sistemas de monitoramento, instalação de câmeras e alarmes, além de atender o público e realizar diversas tarefas da empresa. Também trabalhei como técnico de impressoras em meu primeiro emprego em São José dos Campos, focando principalmente em modelos da marca Epson, mas também mexendo com outras marcas. Atualmente, sou autônomo e estou cursando o primeiro semestre de Desenvolvimento de Software Multiplataforma na Fatec de São José dos Campos. Meus interesses no tempo livre incluem jogar, ler livros, assistir séries, filmes e animes, entre outras coisas diversas. Meu objetivo é me destacar na área de tecnologia e sempre aprender mais. Me considero proativo, criativo, tranquilo, comunicativo e flexível. Estou em busca do meu primeiro estágio na área de programação para alavancar minha carreira e aprofundar meus conhecimentos práticos.
+        </article>
+        <section class="objetivo">
+            <h2>OBJETIVO</h2>
+            <p>OBJETIVOOBJETIVOOBJETIVOOBJETIVOOBJETIVOOBJETIVOOBJETIVOOBJETIVOOBJETIVOOBJETIVOOBJETIVOOBJETIVOOBJETIVO</p>
+        </section>
+        <section class="extra">
+            <h2>EXTRA</h2>
+            <p>EXTRAEXTRAEXTRAEXTRAEXTRAEXTRAEXTRAEXTRAEXTRAEXTRAEXTRAEXTRAEXTRAEXTRA</p>
+        </section>
+    </div>
     <nav class="nav">
-      <ul>
-        <li>
-          <button class="button" onclick="location.href='index.html'">
-            MENU PRINCIPAL
-          </button>
-        </li>
-      </ul>
+        <ul>
+            <li>
+                <button class="button" onclick="location.href='index.html'">MENU PRINCIPAL</button>
+            </li>
+        </ul>
     </nav>
     <div class="player">
-      <button class="playpause">
-        <i class="fas fa-play"></i>
-      </button>
-      <audio id="musicafundo" loop>
-        <source src="../static/audio/gtafundo.mp3" type="audio/mp3" />
-      </audio>
-      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5" />
-      <audio
-        id="audioNavegacao"
-        src="../static/audio/Voicy_Select_Press.mp3"
-      ></audio>
-      <script src="../static/javascript/script.js"></script>
+        <button class="playpause">
+            <i class="fas fa-play"></i>
+        </button>
+        <audio id="musicafundo" loop>
+            <source src="../static/audio/gtafundo.mp3" type="audio/mp3" />
+        </audio>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5" />
+        <audio id="audioNavegacao" src="../static/audio/Voicy_Select_Press.mp3"></audio>
+        <script src="../static/javascript/script.js"></script>
     </div>
-  </body>
+</body>
 </html>

@@ -1,29 +1,21 @@
 @font-face {
   font-family: "Becket";
   src: url("../fonts/Becket.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: "Olden";
   src: url("../fonts/Olden.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: "Pricedown";
   src: url("../fonts/Pricedown.otf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: "Cyber";
   src: url("../fonts/Cyber.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 :root {
@@ -41,44 +33,83 @@
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
   height: 100%;
   background-color: var(--fundo);
   background-image: url('/static/images/bgmenu.png');
-  background-size: 115% 600px;
-  background-position: center top;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+}
+
+.nome {
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+      "perfil perfil perfil"
+      "foto sobre sobre"
+      "objetivo objetivo objetivo"
+      "extra extra extra";
+  gap: 20px;
+  margin: 20px;
+  width: 80%;
+}
+
+.perfil {
+  grid-area: perfil;
+  font-family: "Cyber", sans-serif;
+  color: var(--fonte1);
+  text-align: center;
+}
+
+.foto {
+  grid-area: foto;
+  width: 200px;
+  height: auto;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.sobre {
+  grid-area: sobre;
+  color: var(--fonte1);
+  font-family: "Cyber", sans-serif;
+}
+
+.objetivo {
+  grid-area: objetivo;
+  color: var(--fonte1);
+  font-family: "Cyber", sans-serif;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.extra {
+  grid-area: extra; /* Corrigido para 'extra' */
+  color: var(--fonte1);
+  font-family: "Cyber", sans-serif;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .nav {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
   background-color: var(--fundo);
-  margin-top: 5%;
+  margin-top: 25%;
   width: 80%;
-  height: 80%;
-}
-
-.nav > ul > li {
-  padding: 10px 10px;
-}
-
-h1 {
-  display: flex;
-  align-items: center;
-  margin-right: 65%;
-  margin-top: 3%;
-  justify-content: flex-start;
-  font-family: "Becket", sans-serif;
-  font-size: 60px;
-  color: var(--fonte1);
 }
 
 .button {
-  position: relative;
   padding-left: 50px;
   font-family: "Cyber", sans-serif;
   font-size: 150%;
@@ -90,50 +121,8 @@ h1 {
 }
 
 .button:hover,
-.button:focus,
-.button.selected {
+.button:focus {
   color: var(--fonte1);
-}
-
-.button:hover::before,
-.button:focus::before,
-.button.selected::before {
-  opacity: 1;
-}
-
-.button::before {
-  content: url("../images/arrow.png");
-  position: absolute;
-  left: 5px;
-  top: 85%;
-  transform: translateY(-50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.playpause {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  font-size: 20px;
-  background-color: var(--fonte2);
-  color: var(--fonte1);
-  border-radius: 100%;
-  transition: 0.1s ease;
-}
-
-.playpause:hover {
-  font-size: 25px;
-  color: #e0f4ff;
-}
-
-#volume {
-  width: 150px;
-  height: 10px;
-  border-radius: 10px;
-  margin-top: 15px;
 }
 
 .player {
@@ -143,26 +132,6 @@ h1 {
   margin-top: 2%;
 }
 
-.ovopascoa {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0);
-  color: rgba(255, 255, 255, 0);
-  border: 10px;
-  width: 260px;
-  margin-left: -12px;
-  margin-top: 61px;  
-}
-
-/* Tela de Loading */
-
-.bodyloading {
-  margin: 0px;
-  padding: 0px;
-  height: 100vh;
-}
-
-.loading img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#volume {
+  width: 150px;
 }
