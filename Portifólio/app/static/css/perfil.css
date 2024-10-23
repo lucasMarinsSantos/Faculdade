@@ -42,7 +42,12 @@ body {
 }
 
 .nome {
+  display: flex;
   color: white;
+  font-family: Olden;
+  margin: 2%;
+
+  height: 40px;
 }
 
 .container {
@@ -89,7 +94,7 @@ body {
 }
 
 .extra {
-  grid-area: extra; /* Corrigido para 'extra' */
+  grid-area: extra;
   color: var(--fonte1);
   font-family: "Cyber", sans-serif;
   background: rgba(0, 0, 0, 0.5);
