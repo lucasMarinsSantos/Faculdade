@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <title>Lista de Contatos</title>
+</head>
+<body>
+    <div class="container my-5">
+        <h1>Lista de Contatos</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Assunto</th>
+                    <th>Descrição</th>
+                    <th>Criado Em</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contato in contatos %}
+                <tr>
+                    <td>{{ contato[0] }}</td>
+                    <td>{{ contato[1] }}</td>
+                    <td>{{ contato[2] }}</td>
+                    <td>{{ contato[3] }}</td>
+                    <td>{{ contato[4] }}</td>
+                    <td>{{ contato[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/contato" class="btn btn-primary">Voltar para o Formulário de Contato</a>
+    </div>
+
+    <footer class="footer bg-light text-center p-3">
+        <div class="container">
+            <p class="mb-0">© 2024 Universidade Exemplo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
