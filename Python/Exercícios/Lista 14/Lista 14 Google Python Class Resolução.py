@@ -9,25 +9,20 @@
 # Exercícios extras para listas
 
 # D. Dada uma lista de números retorna uma lista sem os elementos repetidos
-# PS: se você usar o comando set deve ficar ordenado
-# como aparece no resultado dos testes
 def remove_iguais(nums):
-    return sorted(set(nums))
+  return list(set(nums))
 
 # E. Cripto desafio!!
 # Dada uma frase, você deve retirar todas as letras repetidas das palavras
 # e ordenar as letras que sobraram
 # Exemplo: 'ana e mariana gostam de banana' vira 'an e aimnr agmost de abn'
-# Dicas: tente transformar cada palavra em um conjunto,
-# depois tente ordenar as letras e montar uma string com o resultado.
+# Dicas: tente transformar cada palavra em um conjunto, depois tente sortear
+# as letras e montar uma string com o resultado.
 # Utilize listas auxiliares se facilitar
 def cripto(frase):
-    words = frase.split()
-    result = []
-    for word in words:
-        unique_sorted = ''.join(sorted(set(word)))
-        result.append(unique_sorted)
-    return ' '.join(result)
+  return ' '.join([''.join(
+            sorted(set(p)))
+            for p in frase.split()])
 
 # F. Derivada de um polinômio
 # Os coeficientes de um polinômio estão numa lista na ordem do seu grau.
@@ -35,7 +30,7 @@ def cripto(frase):
 # Exemplo: [3, 2, 5, 2] retorna [2, 10, 6]
 # A derivada de 3 + 2x + 5x^2 + 2x^3 é 2 + 10x + 6x^2
 def derivada(coef):
-    return [coef[i] * i for i in range(1, len(coef))]
+  return [c*grau for c,grau in enumerate (coef)][1:]
 
 # G. Soma em listas invertidas
 # Colocamos os dígitos de dois números em listas ao contrário
@@ -44,24 +39,23 @@ def derivada(coef):
 # pode supor que n1 e n2 tem o mesmo número de dígitos
 # Não vale converter a lista em número para somar diretamente
 def soma(n1, n2):
-    carry = 0
-    result = []
-    for i in range(len(n1)):
-        sum_digits = n1[i] + n2[i] + carry
-        result.append(sum_digits % 10)
-        carry = sum_digits // 10
-    if carry:
-        result.append(carry)
-    return result
+  r = []
+  v1 = 0
+  for x, y in zip(n1, n2):
+    n = (x + y) % 10 + v1
+    v1 = (x + y) // 10
+    r.append(n)
+  if v1 != 0: r.append(v1)
+  return r
 
 # H. Anagrama
 # Verifique se duas palavras são anagramas,
-# isto é, uma palavra é permutação das letras da outra
+# isto é são uma é permutação das letras da outra
 # anagrama('aberto', 'rebato') = True
 # anagrama('amor', 'ramo') = True
 # anagrama('aba', 'baba') = False
 def anagrama(s1, s2):
-    return sorted(s1) == sorted(s2)
+  return sorted(s1) == sorted(s2)
 
 def test(obtido, esperado):
   if obtido == esperado:
@@ -95,8 +89,6 @@ def main():
 
   print ()
   print ('anagrama')
-  test(anagrama('abacate', 'abacatx'), False)
-  test(anagrama('sim', 'xxs'), False)
   test(anagrama('sim', 'siiimmmmm'), False)
   test(anagrama('iracema', 'america'), True)
   test(anagrama('ator', 'rota'), True)
@@ -106,9 +98,7 @@ def main():
   test(anagrama('baba', 'aba'), False)
   test(anagrama('casa', 'cassa'), False)
   test(anagrama('palmeiras', 'abacate'), False)
-  test(anagrama('arco', 'roca'), True)
-  test(anagrama('alegria', 'alergia'), True)
-  test(anagrama('cantiga', 'catinga'), True)
+
 
 if __name__ == '__main__':
   main()

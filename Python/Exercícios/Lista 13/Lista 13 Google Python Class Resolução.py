@@ -9,31 +9,35 @@
 # A. fim_igual
 # Dada uma lista de strings, retorna o número de strings
 # com tamanho >= 2 onde o primeiro e o último caracteres são iguais
-# Exemplo: ['aba', 'xyz', 'aa', 'x', 'bbb'] retorna 3
 def fim_igual(words):
-    count = 0
-    for word in words:
-        if len(word) >= 2 and word[0] == word[-1]:
-            count += 1
-    return count
-
+  return len([w for w in words
+         if len(w) >= 2 and w[0] == w[-1]])
+  k = 0
+  for word in words:
+    if len(word) >= 2 and word[0] == word[-1]:
+      k = k + 1
+  return k
 
 # B. x_antes
-# Dada uma lista de strings retorna uma lista onde
-# todos os elementos que começam com x ficam sorteados antes 
-# Ex.: ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] retorna
+# Dada uma lista de strings retorna uma lista onde todos os elementos
+# que começam com x ficam sorteados antes 
+# Exemplo ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] retorna
 # ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
-# Obs.: é necessário que cada lista esteja em ordem antes
-# de juntar, a que tem strings que começam com x e a que não
 # Dica: monte duas listas separadas e junte-as no final
 def x_antes(words):
-    x_words = [word for word in words if word.startswith('x')]
-    non_x_words = [word for word in words if not word.startswith('x')]
-    return sorted(x_words) + sorted(non_x_words)
+  x = []
+  outros = []
+  for w in words:
+    if w.startswith('x'): #w[0] == 'x'
+      x.append(w)
+    else:
+      outros.append(w)
+  return sorted(x) + sorted(outros)
 
-
-def last(a): #esta def serve para a letra C
-  return 
+# LAB(begin solution)
+# Extract the last element from a tuple -- used for custom sorting below.
+def last(a):  return a[-1]
+# LAB(end solution)
 
 # C. sort_last
 # Dada uma lista de tuplas não vazias retorna uma tupla ordenada
@@ -42,7 +46,7 @@ def last(a): #esta def serve para a letra C
 # [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Dica: use key=função que você definiu e que retorna o último elemento
 def sort_last(tuples):
-    return sorted(tuples, key=lambda x: x[-1])
+  return sorted(tuples, key=last)
 
 def test(obtido, esperado):
   if obtido == esperado:

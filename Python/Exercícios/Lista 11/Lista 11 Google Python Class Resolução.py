@@ -14,9 +14,7 @@
 # donuts(5) returns 'Número de donuts: 5'
 # donuts(23) returns 'Número de donuts: muitos'
 def donuts(n):
-    if n >= 10:
-        return 'Número de donuts: muitos'
-    return f'Número de donuts: {n}'
+  return f'Número de donuts: {"muitos" if n >= 10 else n}'
 
 # B. pontas
 # Dada uma string s, retorna uma string com as duas primeiras e as duas
@@ -24,9 +22,7 @@ def donuts(n):
 # Assim 'palmeiras' retorna 'paas'
 # No entanto, se a string tiver menos que 2 letras, retorna uma string vazia
 def pontas(s):
-    if len(s) < 2:
-        return ''
-    return s[:2] + s[-2:]
+  return '' if len(s) < 2 else s[:2] + s[-2:]
 
 # C. fixa_primeiro
 # Dada uma string s, retorna uma string onde todas as ocorrências
@@ -34,31 +30,30 @@ def pontas(s):
 # Assim 'abacate' retorna 'ab*c*te'
 # Dica: use s.replace(stra, strb) 
 def fixa_primeiro(s):
-    if len(s) < 1:
-        return s
-    return s[0] + s[1:].replace(s[0], '*')
+  return s[0] + s[1:].replace(s[0], '*')
 
 # D. mistura2
 # Sejam duas strings a e b
 # Retorno uma string '<a> <b>' separada por um espaço
-# com as duas primeiras letras trocadas de cada string 
+# com as duas letras trocadas de cada string 
 #   'mix', pod' -> 'pox mid'
 #   'dog', 'dinner' -> 'dig donner'
 def mistura2(a, b):
-    return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
+  return b[:2] + a[2:] + ' ' + a[:2] + b[2:] 
 
 # E. palindrome
 # Verifique se uma string é palíndrome
 #   palindrome('asa') True
 #   palindrome('casa') False 
 def palindrome(s):
-    return s == s[::-1]
+  return s == s[::-1]
 
-# F. busca
+# F. busca (COMP 89 IME-USP)
 # Verifique quantas ocorrências de uma palavra há numa frase
 # frase = 'ana e mariana gostam de banana'
 # palavra = 'ana'
 # busca ('ana e mariana gostam de banana', 'ana') == 4
+# Hall of Fame Victor H. Panisa, 1a turma Python para Zumbis
 def busca(frase, palavra):
   return len([k for k in range(len(frase))
       if frase[k:k+len(palavra)] == palavra])
@@ -70,8 +65,7 @@ def test(obtido, esperado):
     prefixo = ' Parabéns!'
   else:
     prefixo = ' Ainda não'
-  print ('%s obtido: %s esperado: %s'
-         % (prefixo, repr(obtido), repr(esperado)))
+  print ('%s obtido: %s esperado: %s' % (prefixo, repr(obtido), repr(esperado)))
 
 def main():
   print ('donuts')
@@ -109,7 +103,7 @@ def main():
   print ()
   print ('busca')
   test(busca('ana e mariana gostam de banana', 'ana'), 4)
-  test(busca('uma arara ou duas araras', 'ara'), 4)
+  test(busca('uma arara ou duas araras', 'ara'), 4) 
 
 if __name__ == '__main__':
   main()
